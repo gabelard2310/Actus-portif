@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>le psg leader en ligue1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body></body>
+
+    <main>
+        <article>
+            <header>
+                <h2>Le PSG viens de remporté sont match contre toulouse</h2>
+                <p class="date">Publié le 8 décembre 2024</p>
+            </header>
+
+            <section class="content">
+                <p>Le Paris Saint-Germain a remporté sont match contre Toulouse 3-0 pour le club de lq capital est commence a s'envolé qux classement </p>
+                
+                <!-- Ajouter une image pour l'article -->
+                <img src="images/psg-vs-lyon.jpg" alt="PSG contre Toulouse" class="article-image">
+
+                <p>Cette victoire permet au PSG de rester en tête du championnat, avec une avance confortable sur ses poursuivants...</p>
+                <p>Les joueurs clés, sont João Pedro Gonçalves Neves,Beraldo,vitinha ...</p>
+
+                <h3>Les moments forts du match</h3>
+                <ul>
+                    <li>João Pedro Gonçalves Neves ouvre le score à la 35e minute</li>
+                    <li>le deuxième but et signée beraldo à la 60e et 84e minute</li>
+                    <li>et le dernier but de cet rencontre et signée vitinha 91e minute </li>
+                </ul>
+
+                <h3>Les réactions après le match</h3>
+                <p>Les joueurs et entraîneurs ont exprimé leur satisfaction après cette victoire...</p>
+
+                <blockquote>
+                    <p>"Nous avons bien joué collectivement, c'est une victoire importante pour nous et notre objectif de titre."</p>
+                    <footer>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Actu Sport - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score en Direct</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .scoreboard {
+      margin: 50px auto;
+      max-width: 400px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .team {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+
+    .team h2 {
+      margin: 0;
+    }
+
+    .score {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .buttons button {
+      background-color: #00b4d8;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons button:hover {
+      background-color: #0077b6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Score en Direct</h1>
+  <div class="scoreboard">
+    <div class="team">
+      <h2>brest</h2>
+      <div class="score" id="scoreA">0</div>
+    </div>
+    <div class="team">
+      <h2>Équipe B</h2>
+      <div class="score" id="scoreB">0</div>
+    </div>
+    <div class="buttons">
+      <button onclick="updateScore('A', 1)">+1 Équipe A</button>
+      <button onclick="updateScore('A', -1')">-1 Équipe A</button>
+      <button onclick="updateScore('B', 1)">+1 Équipe B</button>
+      <button onclick="updateScore('B', -1)">-1 Équipe B</button>
+    </div>
+  </div>
+
+  <script>
+    // Initialisation des scores
+    let scoreA = 0;
+    let scoreB = 0;
+
+    // Fonction pour mettre à jour les scores
+    function updateScore(team, points) {
+      if (team === 'A') {
+        scoreA = Math.max(0, scoreA + points); // Evite les scores négatifs
+        document.getElementById('scoreA').innerText = scoreA;
+      } else if (team === 'B') {
+        scoreB = Math.max(0, scoreB + points); // Evite les scores négatifs
+        document.getElementById('scoreB').innerText = scoreB;
+      }
+    }
+  </script>
+</body>
+</html>

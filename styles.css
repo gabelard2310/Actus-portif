@@ -1,0 +1,368 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #0066cc;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #db0c0c;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}article-sport {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.article-sport h2 {
+    color: #0066cc;
+    font-size: 1.5rem;
+}
+
+.article-sport p {
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+.article-sport img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+}
+
+.article-sport a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-sport a:hover {
+    text-decoration: underline;
+}header {
+    background-color: #0066cc;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #004c99;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+#football {
+    background-color: #dff0d8;
+}
+
+#basketball {
+    background-color: #d9edf7;
+}
+
+#tennis {
+    background-color: #fcf8e3;
+}
+
+#autres-sports {
+    background-color: #f2dede;
+}document.addEventListener("DOMContentLoaded", () => {
+    const menuLinks = document.querySelectorAll("nav ul li a");
+    const sections = document.querySelectorAll("section");
+
+    // Met à jour le lien actif en fonction de la section visible
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 60) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        menuLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
+            }
+        });
+    });
+});
+nav ul li a.active {
+    color: #ffcc00;
+}a {
+    color: #00fd3f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}nav ul li a.active {
+    color: #ffcc00;
+    font-weight: bold;
+}section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+section h3 {
+    color: #010407;
+    font-size: 1.4rem;
+}
+
+article {
+    margin-bottom: 1rem;
+}
+
+article h4 {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+section h3 {
+    color: #0066cc;
+    font-size: 1.4rem;
+}
+
+article {
+    margin-bottom: 1rem;
+}
+
+article h4 {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}article {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+article h2 {
+    color: #000000;
+}
+
+article .date {
+    color: #888;
+    font-style: italic;
+}
+
+article .content {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+article img.article-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+article h3 {
+    color: #333;
+}
+
+article ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+article blockquote {
+    font-style: italic;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #e6ff05;
+    border-left: 5px solid #000000;
+}
+body {
+    background: linear-gradient(135deg, #0066cc, #00cc99);
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Pour que le texte soit lisible sur le dégradé */
+}body {
+    background: url('images/sport-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}body {
+    background: url('images/sport-pattern.png') repeat;
+    background-color: #f4f4f4; /* Couleur de fond pour combler les espaces */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}body {
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background: url('images/sport-hero.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}.video-background {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-background .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}body {
+    background: linear-gradient(135deg, #0066cc, #00cc99);
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(221, 20, 20);
+    position: relative;
+}
+
+body::after {
+    content: '';
+    background: url('images/football-icon.png') no-repeat;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 150px;
+    height: 150px;
+    opacity: 0.5;
+}

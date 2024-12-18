@@ -1,0 +1,114 @@
+<section id="football">
+  <h2>Football</h2>
+  <p>Découvrez les dernières nouvelles et analyses sur le football.</p>
+  <ul>
+      <li><a href="psg.html">Psg</a></li>
+      <li><a href="Marseille.html">Marseille</a></li>
+      <li><a href="Brest.html">Brest</a></li>
+  </ul>
+  <a href="football.html">Voir toutes les actualités Football</a>
+</section>
+<link rel="stylesheet" href="ligue1.css">
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actu Sport</title>
+<link rel="stylesheet" href="ligue1.css">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classement Sportif</title>
+<style>
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<h1>Classement Sportif</h1>
+<div class="ranking-container">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Équipe</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody id="rankingTable">
+      <!-- Les données seront générées ici -->
+    </tbody>
+  </table>
+</div>
+
+<script>
+  // Données initiales du classement
+  const teams = [
+    { name: "Paris", points: 34 },
+    { name: "Marseille", points: 30 },
+    { name: "Monaco C", points: 30 },
+    { name: "Lille", points: 27 },
+    { name: "Lyon", points: 25 },
+    { name: "Nice", points: 24 },
+    { name: "Lens", points: 24 },
+    { name: "Auxerre", points: 21 },
+    { name: "Toulouse", points: 21 },
+   { name: "Reims", points: 20 },
+   
+  ];
+
+  // Fonction pour afficher le classement
+  function displayRanking() {
+    const rankingTable = document.getElementById("rankingTable");
+    rankingTable.innerHTML = "";
+
+    // Trier les équipes par points (ordre décroissant)
+    teams.sort((a, b) => b.points - a.points);
+
+    // Générer les lignes du tableau
+    teams.forEach((team, index) => {
+      rankingTable.innerHTML += `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${team.name}</td>
+          <td>${team.points}</td>
+        </tr>
+      `;
+    });
+  }
+
+  // Fonction pour ajouter des points à une équipe
+  function addPoints(teamName) {
+    const team = teams.find(t => t.name === teamName);
+    if (team) {
+      team.points += 3; // Ajouter 3 points
+      displayRanking(); // Mettre à jour le classement
+    }
+  }
+
+  // Afficher le classement initial
+  displayRanking();
+</script>
+</body>
+</html>
