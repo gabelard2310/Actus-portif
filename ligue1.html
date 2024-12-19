@@ -26,89 +26,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Classement Sportif</title>
-<style>
-  h1 {
-    margin-bottom: 20px;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classement Sportif</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #ffffff;
+      padding: 20px;
+    }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
 
-  .buttons {
-    margin-top: 20px;
-  }
-</style>
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    thead {
+      background: #4CAF50;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
+
+    th {
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    tbody tr:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .highlight {
+      background-color: #ff9800 !important;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-<h1>Classement Sportif</h1>
-<div class="ranking-container">
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Équipe</th>
-        <th>Points</th>
-      </tr>
-    </thead>
-    <tbody id="rankingTable">
-      <!-- Les données seront générées ici -->
-    </tbody>
-  </table>
-</div>
-
-<script>
-  // Données initiales du classement
-  const teams = [
-    { name: "Paris", points: 34 },
-    { name: "Marseille", points: 30 },
-    { name: "Monaco C", points: 30 },
-    { name: "Lille", points: 27 },
-    { name: "Lyon", points: 25 },
-    { name: "Nice", points: 24 },
-    { name: "Lens", points: 24 },
-    { name: "Auxerre", points: 21 },
-    { name: "Toulouse", points: 21 },
-   { name: "Reims", points: 20 },
-   
-  ];
-
-  // Fonction pour afficher le classement
-  function displayRanking() {
-    const rankingTable = document.getElementById("rankingTable");
-    rankingTable.innerHTML = "";
-
-    // Trier les équipes par points (ordre décroissant)
-    teams.sort((a, b) => b.points - a.points);
-
-    // Générer les lignes du tableau
-    teams.forEach((team, index) => {
-      rankingTable.innerHTML += `
+  <div class="container">
+    <h1>Classement Sportif</h1>
+    <table>
+      <thead>
         <tr>
-          <td>${index + 1}</td>
-          <td>${team.name}</td>
-          <td>${team.points}</td>
+          <th>#</th>
+          <th>Équipe</th>
+          <th>Points</th>
         </tr>
-      `;
-    });
-  }
+      </thead>
+      <tbody id="rankingTable">
+        <!-- Les lignes du classement seront générées ici -->
+      </tbody>
 
-  // Fonction pour ajouter des points à une équipe
-  function addPoints(teamName) {
-    const team = teams.find(t => t.name === teamName);
-    if (team) {
-      team.points += 3; // Ajouter 3 points
-      displayRanking(); // Mettre à jour le classement
+  <script>
+    // Données initiales des équipes
+    const teams = [
+      { name: 'Paris', points: 12 },
+      { name: 'Team B', points: 10 },
+      { name: 'Team C', points: 8 },
+    ];
+
+    // Fonction pour afficher le classement
+    function displayRanking() {
+      const tableBody = document.getElementById('rankingTable');
+      tableBody.innerHTML = '';
+
+      // Trier les équipes par points décroissants
+      teams.sort((a, b) => b.points - a.points);
+
+      // Générer les lignes du tableau
+      teams.forEach((team, index) => {
+        tableBody.innerHTML += `
+          <tr class="${index === 0 ? 'highlight' : ''}">
+            <td>${index + 1}</td>
+            <td>${team.name}</td>
+            <td>${team.points}</td>
+          </tr>
+        `;
+      });
     }
-  }
 
-  // Afficher le classement initial
-  displayRanking();
-</script>
+    // Fonction pour ajouter des points à une équipe
+    function addPoints(teamName) {
+      const team = teams.find(t => t.name === teamName);
+      if (team) {
+        team.points += 3; // Ajouter 3 points
+        displayRanking(); // Mettre à jour l'affichage
+      }
+    }
+
+    // Afficher le classement initial
+    displayRanking();
+  </script>
 </body>
 </html>
+  
