@@ -42,13 +42,13 @@ section {
 footer {
     text-align: center;
     background-color: #333;
-    color: white;
+    color: rgba(22, 13, 138, 0.479);
     padding: 1rem;
 }article-sport {
-    border: 1px solid #ddd;
+    border: 1px solid #960fb1;
     padding: 1rem;
     margin: 1rem 0;
-    background-color: #f9f9f9;
+    background-color: #5704db;
     border-radius: 8px;
 }
 
@@ -113,24 +113,20 @@ section {
 
 section h2 {
     color: #333;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #5f0000;
     padding-bottom: 0.5rem;
 }
 
 #football {
-    background-color: #dff0d8;
+    background-color: #4bbd1f;
 }
 
 #basketball {
-    background-color: #d9edf7;
-}
-
-#tennis {
-    background-color: #fcf8e3;
+    background-color: #1b8cc5;
 }
 
 #autres-sports {
-    background-color: #f2dede;
+    background-color: #e60909;
 }document.addEventListener("DOMContentLoaded", () => {
     const menuLinks = document.querySelectorAll("nav ul li a");
     const sections = document.querySelectorAll("section");
@@ -209,7 +205,7 @@ ul li {
 section {
     margin: 2rem 0;
     padding: 1rem;
-    background-color: #f9f9f9;
+    background-color: #7ed60a;
     border-radius: 8px;
 }
 
@@ -247,7 +243,7 @@ ul li {
 }article {
     margin: 2rem 0;
     padding: 1rem;
-    background-color: #f9f9f9;
+    background-color: #751818;
     border-radius: 8px;
 }
 
