@@ -1,10 +1,201 @@
-<section id="Nba">
-    <h2>Football</h2>
-    <p>Découvrez les dernières nouvelles et analyses sur le football.</p>
-    <ul>
-        <li><a href="lakers.html">lacker</a></li>
-        <li><a href="Bulls.html">Champions League</a></li>
-        <li><a href="football.html#transferts">Transferts</a></li>
-    </ul>
-    <a href="football.html">Voir toutes les actualités Football</a>
-</section>
+<link rel="stylesheet" href="styles.css">
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actu Sport</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+      <h1>Actu Sport</h1>
+      <nav>
+          <ul>
+              <li><a href="psg.html">Psg</a></li>
+              <li><a href="Brest.html">Brest></li>
+              <li><a href="Marseille.html">Marseille</a></li>
+              <li><a href="">Autres sports</a></li>
+          </ul>
+      </nav>
+<head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Classement NBA</title>
+      <style>
+        body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          background: linear-gradient(135deg, #1d1f21, #2a2d32);
+          color: #ffffff;
+          padding: 20px;
+        }
+    
+        .container {
+          max-width: 900px;
+          margin: 0 auto;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          border-radius: 12px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+    
+        h1 {
+          text-align: center;
+          font-size: 2.5em;
+          margin-bottom: 20px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+    
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+        }
+    
+        thead {
+          background: #FF4500;
+        }
+    
+        th, td {
+          padding: 15px;
+          text-align: center;
+        }
+    
+        th {
+          text-transform: uppercase;
+          color: #ffffff;
+          font-weight: bold;
+        }
+    
+        tbody tr:nth-child(odd) {
+          background: rgba(255, 255, 255, 0.1);
+        }
+    
+        tbody tr:nth-child(even) {
+          background: rgba(255, 255, 255, 0.05);
+        }
+    
+        tbody tr:hover {
+          background: rgba(255, 165, 0, 0.4);
+          cursor: pointer;
+        }
+    
+        .highlight {
+          background: #32CD32 !important;
+        }
+    
+        .btn-container {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+        }
+    
+        button {
+          background-color: #FF4500;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          margin: 5px;
+          font-size: 16px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+    
+        button:hover {
+          background-color: #ff6347;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Classement NBA</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Équipe</th>
+              <th>Victoires</th>
+              <th>Défaites</th>
+              <th>% Victoire</th>
+            </tr>
+          </thead>
+          <tbody id="rankingTable">
+            <!-- Les lignes du classement seront générées ici -->
+          </tbody>
+        </table>
+        <div class="btn-container">
+          <button onclick="addWin('Lakers')">+1 Victoire Lakers</button>
+          <button onclick="addLoss('Warriors')">+1 Défaite Warriors</button>
+          <button onclick="addWin('Celtics')">+1 Victoire Celtics</button>
+        </div>
+      </div>
+    
+      <script>
+        // Données initiales des équipes NBA
+        const teams = [
+          { name: 'Lakers', wins: 15, losses: 10 },
+          { name: 'Warriors', wins: 14, losses: 11 },
+          { name: 'Celtics', wins: 13, losses: 12 },
+        ];
+    
+        // Calculer le pourcentage de victoires
+        const calculateWinPercentage = (wins, losses) => {
+          return ((wins / (wins + losses)) * 100).toFixed(2);
+        };
+    
+        // Afficher le classement NBA
+        function displayRanking() {
+          const tableBody = document.getElementById('rankingTable');
+          tableBody.innerHTML = '';
+    
+          // Trier par pourcentage de victoires
+          teams.sort((a, b) => {
+            return calculateWinPercentage(b.wins, b.losses) - calculateWinPercentage(a.wins, a.losses);
+          });
+    
+          // Générer les lignes du tableau
+          teams.forEach((team, index) => {
+            tableBody.innerHTML += `
+              <tr class="${index === 0 ? 'highlight' : ''}">
+                <td>${index + 1}</td>
+                <td>${team.name}</td>
+                <td>${team.wins}</td>
+                <td>${team.losses}</td>
+                <td>${calculateWinPercentage(team.wins, team.losses)}%</td>
+              </tr>
+            `;
+          });
+        }
+    
+        // Ajouter une victoire
+        function addWin(teamName) {
+          const team = teams.find(t => t.name === teamName);
+          if (team) {
+            team.wins += 1;
+            displayRanking();
+          }
+        }
+    
+        // Ajouter une défaite
+        function addLoss(teamName) {
+          const team = teams.find(t => t.name === teamName);
+          if (team) {
+            team.losses += 1;
+            displayRanking();
+          }
+        }
+    
+        // Afficher le classement initial
+        displayRanking();
+      </script>
+    </body>
+    </html>
