@@ -1,0 +1,228 @@
+<link rel="stylesheet" href="styles.css">
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actu Sport</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+      <h1>Actu Sport</h1>
+      <nav>
+          <ul>
+              <li><a href="Liverpool.html">Liverpool</a></li>
+              <li><a href="FC Barcelone.html">FC Barcelone</li>
+              <li><a href="Arsenal.html">Arsenal</a></li>
+              <li><a href="Bayer Leverkusen.html">Bayer Leverkusen</a></li>
+              <li><a href="Aston Villa.html">Aston Villa</a></li>
+              <li><a href="Inter Milan.html">Inter Milan</a></li>
+              <li><a href="Brest.html">Brest</a></li>
+              <li><a href="Lille.html">Lille</a></li>
+              <li><a href="Dortmund.html">Dortmund</a></li>
+              <li><a href="Bayern Munich.html">Bayern Munich</a></li>
+            </ul>
+        <nav>
+            <ul>
+              <li><a href="Atlético Madrid.html">Atlético Madrid</a></li> 
+              <li><a href="AC Milan.html">AC Milan</a></li>
+              <li><a href="Atalanta.html">Atalanta</a></li>
+              <li><a href="Juventus.html">Juventus</a></li>
+              <li><a href="Benfica.html">Benfica</a></li>
+              <li><a href="Monaco.html">Monaco</a></li>
+              <li><a href="Sporting.html">Sporting</a></li>
+              <li><a href="Feyenoord.html">Feyenoord</a></li>
+              </ul>
+                <nav>
+                    <ul>
+                        <li><a href="Club Brugge.html">Club Brugge</a></li>
+                        <li><a href="Real Madrid.html">Real Madrid</li>
+                        <li><a href="Celtic Glasgow.html">Celtic Glasgow</a></li>
+                        <li><a href="Manchester City.html">Manchester City</a></li>
+                        <li><a href="PSV Eindhoven.html">PSV Eindhoven</a></li>
+                        <li><a href="Dinamo Zagreb.html">Dinamo Zagreb</a></li>
+                        <li><a href="Paris-SG.html">Paris-SG</a></li>
+                        <li><a href="Stuttgart.html">Stuttgart</a></li>
+                        <li><a href="Chakhtar Donetsk.html">Chakhtar Donetsk</a></li>
+                        <li><a href="Sparta Prague.html">Sparta Prague</a></li>
+                      </ul>
+                  <nav>
+                      <ul>
+                        <li><a href="Sturm Graz.html">Sturm Graz</a></li> 
+                        <li><a href="Girona.html">Girona</a></li>
+                        <li><a href="Étoile rouge de Belgrade.html">Étoile rouge de Belgrade</a></li>
+                        <li><a href="RB Salzburg.html">RB Salzburg</a></li> 
+                        <li><a href="Bologne.html">Bologne</a></li>
+                        <li><a href="RB Leipzig.html">RB Leipzig</a></li>
+                        <li><a href="ŠK Slovan Bratislava.html">ŠK Slovan Bratislava</a></li>
+                        <li><a href="Young Boys.html">Young Boy</a></li>
+                   <ul>
+                </nav>
+              <head>                     
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classement ligue1</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #ffffff;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    thead {
+      background: #4CAF50;
+    }
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
+    th {
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+    }
+    tbody tr:nth-child(odd) {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    tbody tr:nth-child(even) {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    tbody tr:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .highlight {
+      background-color: #ff9800 !important;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+</section>
+<body>
+   <div class="container">
+    <h1>Classement ligue1</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Équipe</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody id="rankingTable">
+        <!-- Les lignes du classement seront générées ici -->
+      </tbody>
+  <script>
+    // Données initiales des équipes
+    const teams = [
+    { name: "Liverpool", points: 34 },
+    { name: "FC Barcelone", points: 30 },
+    { name: "Arsenal", points: 13 },
+    { name: "Bayer Leverkusen", points: 13 },
+    { name: "Aston Villan", points: 13 },
+    { name: "Inter Milane", points: 13 },
+    { name: "Brest", points: 13 },
+    { name: "lille", points: 13 },
+    { name: "Dortmund", points: 12 },
+   { name: "Bayern Munich", points: 12 },
+   { name: "Atlético Madrid", points: 12 },
+   { name: "AC Milan", points: 12 },
+   { name: "Atalanta", points: 11 },
+   { name: "Juventus", points: 11 },
+   { name: "Benfica", points: 10 },   
+   { name: "Monaco", points: 10 },
+   { name: "Sporting", points: 10 },
+   { name: "Feyenoord", points: 10 }, 
+   { name: "Club Brugge", points: 10 }, 
+   { name: "Real Madrid", points: 9 }, 
+   { name: "Celtic Glasgow", points: 9 }, 
+   { name: "Manchester City", points: 8 }, 
+   { name: "PSV Eindhoven", points: 8 }, 
+   { name: "Dinamo Zagreb", points: 8 }, 
+   { name: "Paris-SG", points: 7 }, 
+   { name: "Stuttgart", points: 7 },
+   { name: "Chakhtar Donetsk", points: 4 }, 
+   { name: "Sparta Prague", points: 4 }, 
+   { name: "Sturm Graz", points: 3 }, 
+   { name: "Girona", points: 3 }, 
+   { name: "Étoile rouge de Belgrade", points: 3 }, 
+   { name: "RB Salzburg", points: 3 }, 
+   { name: "Bologne", points: 2 }, 
+   { name: "RB Leipzig", points: 0 }, 
+   { name: "ŠK Slovan Bratislava", points: 0 }, 
+   { name: "Young Boy", points: 0 }, 
+];
+  // Fonction pour afficher le classement
+    function displayRanking() {
+      const tableBody = document.getElementById('rankingTable');
+      tableBody.innerHTML = '';
+      // Trier les équipes par points décroissants
+      teams.sort((a, b) => b.points - a.points);
+      // Générer les lignes du tableau
+      teams.forEach((team, index) => {
+        tableBody.innerHTML += `
+          <tr class="${index === 0 ? 'highlight' : ''}">
+            <td>${index + 1}</td>
+            <td>${team.name}</td>
+            <td>${team.points}</td>
+          </tr>
+        `;
+      });
+    }    
+    // Fonction pour ajouter des points à une équipe
+    function addPoints(teamName) {
+      const team = teams.find(t => t.name === teamName);
+      if (team) {
+        team.points += 3; // Ajouter 3 points
+        displayRanking(); // Mettre à jour l'affichage
+      }
+    }
+    // Afficher le classement initial
+    displayRanking();
+  </script>
+    <section id=>
+        <a href="index.html">Voir toutes les actualités Football</a>
+        </section>  
+<body>
