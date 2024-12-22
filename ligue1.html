@@ -1,37 +1,47 @@
-<section id="football">
-  <h2>Football</h2>
-  <p>Découvrez les dernières nouvelles et analyses sur le football.</p>
-  <ul>
-      <li><a href="psg.html">Psg</a></li>
-      <li><a href="Marseille.html">Marseille</a></li>
-      <li><a href="Brest.html">Brest</a></li>
-  </ul>
-  <a href="football.html">Voir toutes les actualités Football</a>
-</section>
-<link rel="stylesheet" href="ligue1.css">
+<link rel="stylesheet" href="style.css">
 </div>
 </body>
 </html>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Actu Sport</title>
-<link rel="stylesheet" href="ligue1.css">
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classement Sportif</title>
+  <title>Actu Sport</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+      <h1>Actu Sport</h1>
+      <nav>
+          <ul>
+              <li><a href="psg.html">Psg</a></li>
+              <li><a href="Brest.html">Brest</li>
+              <li><a href="Marseille.html">Marseille</a></li>
+              <li><a href="Maonaco.html">Monaco</a></li>
+              <li><a href="Lille.html">Lille</a></li>
+              <li><a href="Lyon.html">Lyon</a></li>
+              <li><a href="Nice.html">Nice</a></li>
+              <li><a href="Lens.html">Lens</a></li>
+              <li><a href="Reims.html">Reims</a></li>
+              <li><a href="Auxerre.html">Auxerre</a></li>
+            </ul>
+        <nav>
+            <ul>
+              <li><a href="Toulouse.html">Toulouse</a></li> 
+              <li><a href="Rennes.html">Rennes</a></li>
+              <li><a href="Strasbourg.html">Strasbourg</a></li>
+              <li><a href="Nantes.html">Nantes</a></li>
+              <li><a href="Angers.html">Angers</a></li>
+              <li><a href="Saint-Étienne.html">Saint-Étienne</a></li>
+              <li><a href="Le-Havre.html">Le Havre</a></li>
+              <li><a href="Montpellier.html">Montpellier</a></li>
+              </ul>
+        </nav>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classement ligue1</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -118,9 +128,12 @@
     }
   </style>
 </head>
+<section id="">
+  <a href="index.html">Voir toutes les actualités Football</a>
+</section>
 <body>
-  <div class="container">
-    <h1>Classement Sportif</h1>
+   <div class="container">
+    <h1>Classement ligue1</h1>
     <table>
       <thead>
         <tr>
@@ -132,15 +145,28 @@
       <tbody id="rankingTable">
         <!-- Les lignes du classement seront générées ici -->
       </tbody>
-
   <script>
     // Données initiales des équipes
     const teams = [
-      { name: 'Paris', points: 12 },
-      { name: 'Team B', points: 10 },
-      { name: 'Team C', points: 8 },
-    ];
-
+    { name: "Paris", points: 34 },
+    { name: "Marseille", points: 30 },
+    { name: "Monaco ", points: 30 },
+    { name: "Lille", points: 27 },
+    { name: "Lyon", points: 25 },
+    { name: "Nice", points: 24 },
+    { name: "Lens", points: 24 },
+    { name: "Auxerre", points: 21 },
+    { name: "Toulouse", points: 21 },
+   { name: "Reims", points: 20 },
+   { name: "Brest", points: 19 },
+   { name: "Rennes", points: 17 },
+   { name: "Strasbourg", points: 17 },
+   { name: "Nantes", points: 14 },
+   { name: "Angers", points: 13 },   
+   { name: "Saint-Étienne", points: 13 },
+   { name: "Le Havre", points: 12 },
+   { name: "Montpellier", points: 9 }, 
+  ];
     // Fonction pour afficher le classement
     function displayRanking() {
       const tableBody = document.getElementById('rankingTable');
@@ -160,7 +186,6 @@
         `;
       });
     }
-
     // Fonction pour ajouter des points à une équipe
     function addPoints(teamName) {
       const team = teams.find(t => t.name === teamName);
@@ -174,5 +199,3 @@
     displayRanking();
   </script>
 </body>
-</html>
-  
