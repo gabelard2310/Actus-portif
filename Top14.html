@@ -1,0 +1,199 @@
+<link rel="stylesheet" href="styles.css">
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actu Sport</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+      <h1>Actu Sport</h1>
+      <nav>
+            <nav>
+              <ul>
+            </ul>
+            <nav>
+                <ul>
+                  <li><a href="Bordeaux Bègles.html">Bordeaux Bègles</a></li>
+                  <li><a href="Toulouse.html">Toulouse</a></li>
+                  <li><a href="Toulon.html">Toulon</a></li>
+                  <li><a href="Bayonne.html">Bayonne</a></li>
+                  <li><a href="Clermont.html">Clermont</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="La Rochelle.html">La Rochelle</a></li> 
+                    <li><a href="Castres.html">Castres</a></li>
+                    <li><a href="Montpellier.html">Montpellier</a></li>
+                    <li><a href="Racing 92.html">Racing 92</a></li>
+                    <li><a href="Stade Français.html">Stade Français</a></li>
+                    <li><a href="Lyon.html">Lyon</a></li>
+                    <li><a href="Perpignan.html">Perpignan</a></li>
+                    <li><a href="Pau.html">Pau</a></li>  
+                    <li><a href="Vannes.html">Vannes</a></li>
+                </ul>
+                </nav>
+            <head>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Classement NBA</title>
+      <style>
+        body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          background: linear-gradient(135deg, #1d1f21, #2a2d32);
+          color: #ffffff;
+          padding: 20px;
+        }
+    
+        .container {
+          max-width: 900px;
+          margin: 0 auto;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          border-radius: 12px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+    
+        h1 {
+          text-align: center;
+          font-size: 2.5em;
+          margin-bottom: 20px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+    
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+        }
+    
+        thead {
+          background: #FF4500;
+        }
+    
+        th, td {
+          padding: 15px;
+          text-align: center;
+        }
+    
+        th {
+          text-transform: uppercase;
+          color: #ffffff;
+          font-weight: bold;
+        }
+    
+        tbody tr:nth-child(odd) {
+          background: rgba(255, 255, 255, 0.1);
+        }
+    
+        tbody tr:nth-child(even) {
+          background: rgba(255, 255, 255, 0.05);
+        }
+    
+        tbody tr:hover {
+          background: rgba(255, 165, 0, 0.4);
+          cursor: pointer;
+        }
+    
+        .highlight {
+          background: #32CD32 !important;
+        }
+    
+        .btn-container {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+        }
+    
+        button {
+          background-color: #FF4500;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          margin: 5px;
+          font-size: 16px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+    
+        button:hover {
+          background-color: #ff6347;
+        }
+      </style>
+</head>
+<section id="">
+  <a href="index.html">Voir toutes les actualités Football</a>
+</section>
+<body>
+   <div class="container">
+    <h1>Classement nba</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Équipe</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody id="rankingTable">
+        <!-- Les lignes du classement seront générées ici -->
+      </tbody>
+  <script>
+    // Données initiales des équipes
+    const teams = [
+    { name: "Bordeaux Bègles", points: 34 },
+    { name: "Toulouse", points: 30 },
+    { name: "Toulon", points: 30 },
+    { name: "Bayonne", points: 27 },
+    { name: "Clermont", points: 25 },
+    { name: "La Rochelle", points: 24 },
+    { name: "Castres", points: 24 },
+    { name: "Montpellier", points: 21 },
+    { name: "Racing 92", points: 21 },
+   { name: "Stade Français", points: 20 },
+   { name: "Lyon", points: 19 },
+   { name: "Perpignan", points: 17 },
+   { name: "Pau", points: 13 },   
+   { name: "Vannes", points: 13 },    
+  ];
+    // Fonction pour afficher le classement
+    function displayRanking() {
+      const tableBody = document.getElementById('rankingTable');
+      tableBody.innerHTML = '';
+
+      // Trier les équipes par points décroissants
+      teams.sort((a, b) => b.points - a.points);
+
+      // Générer les lignes du tableau
+      teams.forEach((team, index) => {
+        tableBody.innerHTML += `
+          <tr class="${index === 0 ? 'highlight' : ''}">
+            <td>${index + 1}</td>
+            <td>${team.name}</td>
+            <td>${team.points}</td>
+          </tr>
+        `;
+      });
+    }
+    // Fonction pour ajouter des points à une équipe
+    function addPoints(teamName) {
+      const team = teams.find(t => t.name === teamName);
+      if (team) {
+        team.points += 3; // Ajouter 3 points
+        displayRanking(); // Mettre à jour l'affichage
+      }
+    }
+    // Afficher le classement initial
+    displayRanking();
+  </script>
+</body>
