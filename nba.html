@@ -14,16 +14,34 @@
   <header>
       <h1>Actu Sport</h1>
       <nav>
-          <ul>
-              <li><a href="psg.html">Psg</a></li>
-              <li><a href="Brest.html">Brest></li>
-              <li><a href="Marseille.html">Marseille</a></li>
-              <li><a href="">Autres sports</a></li>
-          </ul>
-      </nav>
-<head>
+             <li><a href="classement Conférence Est de Nba.html">classement Conférence Est de Nba</a></li>
+            <nav>
+              <ul>
+            </ul>
+            <nav>
+                <ul>
+                  <li><a href="Golden State Warriors.html">Golden State Warriors</a></li>
+                  <li><a href="New Orleans Pelicans.html">New Orleans Pelicans</a></li>
+                  <li><a href="Utah Jazz.html">Utah Jazz</a></li>
+                  <li><a href="Portland Trail Blazers.html">Portland Trail Blazers</a></li>
+                  <li><a href="Sacramento Kings.html">Sacramento Kings</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="Phoenix Suns.html">Phoenix Suns</a></li> 
+                    <li><a href="Minnesota Timberwolves.html">Minnesota Timberwolves</a></li>
+                    <li><a href="Los Angeles Clippers.html">Los Angeles Clippers</a></li>
+                    <li><a href="Los Angeles Lakers.html">Los Angeles Lakers</a></li>
+                    <li><a href="Denver Nuggets.html">Denver Nuggets</a></li>
+                    <li><a href="Houston Rockets.html">Houston Rockets</a></li>
+                    <li><a href="Memphis Grizzlies.html">Memphis Grizzlies</a></li>
+                    <li><a href="Oklahoma City Thunder.html">Oklahoma City Thunder</a></li>  
+                    <li><a href="Mavericks de dallas.html">Mavericks de dallas</a></li>
+                    <li><a href="Spurs.html">Spurs</a></li>          
+                  </ul>
+                </nav>
+            <head>
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,88 +132,71 @@
           background-color: #ff6347;
         }
       </style>
-    </head>
-    <body>
-      <div class="container">
-        <h1>Classement NBA</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Équipe</th>
-              <th>Victoires</th>
-              <th>Défaites</th>
-              <th>% Victoire</th>
-            </tr>
-          </thead>
-          <tbody id="rankingTable">
-            <!-- Les lignes du classement seront générées ici -->
-          </tbody>
-        </table>
-        <div class="btn-container">
-          <button onclick="addWin('Lakers')">+1 Victoire Lakers</button>
-          <button onclick="addLoss('Warriors')">+1 Défaite Warriors</button>
-          <button onclick="addWin('Celtics')">+1 Victoire Celtics</button>
-        </div>
-      </div>
-    
-      <script>
-        // Données initiales des équipes NBA
-        const teams = [
-          { name: 'Lakers', wins: 15, losses: 10 },
-          { name: 'Warriors', wins: 14, losses: 11 },
-          { name: 'Celtics', wins: 13, losses: 12 },
-        ];
-    
-        // Calculer le pourcentage de victoires
-        const calculateWinPercentage = (wins, losses) => {
-          return ((wins / (wins + losses)) * 100).toFixed(2);
-        };
-    
-        // Afficher le classement NBA
-        function displayRanking() {
-          const tableBody = document.getElementById('rankingTable');
-          tableBody.innerHTML = '';
-    
-          // Trier par pourcentage de victoires
-          teams.sort((a, b) => {
-            return calculateWinPercentage(b.wins, b.losses) - calculateWinPercentage(a.wins, a.losses);
-          });
-    
-          // Générer les lignes du tableau
-          teams.forEach((team, index) => {
-            tableBody.innerHTML += `
-              <tr class="${index === 0 ? 'highlight' : ''}">
-                <td>${index + 1}</td>
-                <td>${team.name}</td>
-                <td>${team.wins}</td>
-                <td>${team.losses}</td>
-                <td>${calculateWinPercentage(team.wins, team.losses)}%</td>
-              </tr>
-            `;
-          });
-        }
-    
-        // Ajouter une victoire
-        function addWin(teamName) {
-          const team = teams.find(t => t.name === teamName);
-          if (team) {
-            team.wins += 1;
-            displayRanking();
-          }
-        }
-    
-        // Ajouter une défaite
-        function addLoss(teamName) {
-          const team = teams.find(t => t.name === teamName);
-          if (team) {
-            team.losses += 1;
-            displayRanking();
-          }
-        }
-    
-        // Afficher le classement initial
-        displayRanking();
-      </script>
-    </body>
-    </html>
+</head>
+<section id="">
+  <a href="index.html">Voir toutes les actualités Football</a>
+</section>
+<body>
+   <div class="container">
+    <h1>Classement nba</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Équipe</th>
+          <th>Pourcentage de victoire</th>
+        </tr>
+      </thead>
+      <tbody id="rankingTable">
+        <!-- Les lignes du classement seront générées ici -->
+      </tbody>
+  <script>
+    // Données initiales des équipes
+    const teams = [
+    { name: "Oklahoma City Thunder", points: 82 },
+    { name: "Houston Rockets", points: 68 },
+    { name: "Memphis Grizzlies", points: 66 },
+    { name: "Mavericks de dallas", points: 65 },
+    { name: "Denver Nuggets", points: 59 },
+    { name: "Los Angeles Clippers", points: 56 },
+    { name: "Los Angeles Lakers", points: 55 },
+    { name: "Golden State Warriors", points: 53 },
+    { name: "Spurs", points: 51 },
+   { name: "Minnesota Timberwolves", points: 50 },
+   { name: "Phoenix Suns", points: 50 },
+   { name: "Sacramento Kings", points: 43 },
+   { name: "Portland Trail Blazers", points: 31 },
+   { name: "Utah Jazz", points: 25 },
+   { name: "New Orleans Pelicans", points: 16 },   
+  ];
+    // Fonction pour afficher le classement
+    function displayRanking() {
+      const tableBody = document.getElementById('rankingTable');
+      tableBody.innerHTML = '';
+
+      // Trier les équipes par points décroissants
+      teams.sort((a, b) => b.points - a.points);
+
+      // Générer les lignes du tableau
+      teams.forEach((team, index) => {
+        tableBody.innerHTML += `
+          <tr class="${index === 0 ? 'highlight' : ''}">
+            <td>${index + 1}</td>
+            <td>${team.name}</td>
+            <td>${team.points}</td>
+          </tr>
+        `;
+      });
+    }
+    // Fonction pour ajouter des points à une équipe
+    function addPoints(teamName) {
+      const team = teams.find(t => t.name === teamName);
+      if (team) {
+        team.points += 3; // Ajouter 3 points
+        displayRanking(); // Mettre à jour l'affichage
+      }
+    }
+    // Afficher le classement initial
+    displayRanking();
+  </script>
+</body>
