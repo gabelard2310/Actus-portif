@@ -1,0 +1,199 @@
+<link rel="stylesheet" href="styles.css">
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actu Sport</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+      <h1>Actu Sport</h1>
+      <nav>
+            <nav>
+              <ul>
+                <li><a href="Cleveland Cav.html">Cleveland Cav</a></li>
+                <li><a href="Boston Celtics.html">Boston Celtics</li>
+                <li><a href="NEW YORK KNICKS.html">NEW YORK KNICKS</a></li>
+                <li><a href="Orlando Magic.html">Orlando Magic</a></li>
+                <li><a href="Milwaukee Buc.html">Milwaukee Buc</a></li> 
+                <li><a href="Miami Heat.html">Miami Heat</a></li>
+                <li><a href="Atlanta Hawks.html">Atlanta Hawks</a></li>
+                <li><a href="Indiana Pacers.html">Indiana Pacers</a></li>
+                <li><a href="Chicago Bulls.html">Chicago Bulls</a></li>
+                <li><a href="Detroit Pistons.html">Detroit Pistons</a></li>
+                <li><a href="Brooklyn Nets.html">Brooklyn Nets</a></li>
+            </ul>
+            <nav>
+                <ul>
+                  <li><a href="Philadelphia 76ers.html">Philadelphia 76ers</a></li> 
+                  <li><a href="Toronto Raptors.html">Toronto Raptors</a></li>
+                  <li><a href="Washington Wizards.html">Washington Wizards</a></li>
+                  <li><a href="Homets de Charlotte.html">Homets de Charlotte</a></li>
+                </ul>
+            </nav>
+        <head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classement NBA</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #1d1f21, #2a2d32);
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    thead {
+      background: #FF4500;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
+
+    th {
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    tbody tr:hover {
+      background: rgba(255, 165, 0, 0.4);
+      cursor: pointer;
+    }
+
+    .highlight {
+      background: #32CD32 !important;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #FF4500;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff6347;
+    }
+  </style>
+</head>
+<section id="">
+<a href="index.html">Voir toutes les actualités Football</a>
+</section>
+<body>
+<div class="container">
+<h1>Classement nba</h1>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Équipe</th>
+      <th>Pourcentage de victoire </th>
+    </tr>
+  </thead>
+  <tbody id="rankingTable">
+    <!-- Les lignes du classement seront générées ici -->
+  </tbody>
+<script>
+// Données initiales des équipes
+const teams = [
+{ name: "Cleveland Cav", points: 84 },
+{ name: "Boston Celtics", points: 75 },
+{ name: "NEW YORK KNICKS", points: 65 },
+{ name: "Orlando Magic", points: 61 },
+{ name: "Milwaukee Buc", points: 57 },
+{ name: "Miami Heat", points: 51 },
+{ name: "Atlanta Hawks", points: 50 },
+{ name: "Indiana Pacers", points: 50 },
+{ name: "Chicago Bulls", points: 43 },
+{ name: "Detroit Pistons", points: 43 },
+{ name: "Brooklyn Nets", points: 37 },
+{ name: "Philadelphia 76ers", points: 37 },
+{ name: "Homets de Charlotte", points: 24 },
+{ name: "Toronto Raptors", points: 23 },
+{ name: "Washington Wizards", points: 14 },   
+];
+// Fonction pour afficher le classement
+function displayRanking() {
+  const tableBody = document.getElementById('rankingTable');
+  tableBody.innerHTML = '';
+
+  // Trier les équipes par points décroissants
+  teams.sort((a, b) => b.points - a.points);
+
+  // Générer les lignes du tableau
+  teams.forEach((team, index) => {
+    tableBody.innerHTML += `
+      <tr class="${index === 0 ? 'highlight' : ''}">
+        <td>${index + 1}</td>
+        <td>${team.name}</td>
+        <td>${team.points}</td>
+      </tr>
+    `;
+  });
+}
+// Fonction pour ajouter des points à une équipe
+function addPoints(teamName) {
+  const team = teams.find(t => t.name === teamName);
+  if (team) {
+    team.points += 3; // Ajouter 3 points
+    displayRanking(); // Mettre à jour l'affichage
+  }
+}
+// Afficher le classement initial
+displayRanking();
+</script>
+</body>
