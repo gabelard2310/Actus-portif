@@ -1,20 +1,169 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Tableau de bord</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0021dc;
+            color: #333;
+        }
+
+        /* En-tête */
+        header {
+            background-color: #2575fc;
+            color: rgb(217, 25, 25);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #444;
+        }
+
+        /* Tableau de bord */
+        .dashboard {
+            margin-top: 20px;
+        }
+
+        .dashboard p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .dashboard .favorite {
+            font-weight: bold;
+            color: #2575fc;
+        }
+
+        /* Boutons */
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons .logout {
+            background-color: #ff4c4c;
+            color: white;
+        }
+
+        .buttons .logout:hover {
+            background-color: #e43d3d;
+        }
+
+        .buttons .edit {
+            background-color: #2575fc;
+            color: white;
+        }
+
+        .buttons .edit:hover {
+            background-color: #1e5fb9;
+        }
+
+        /* Lien */
+        .links {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .links a {
+            color: #2575fc;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <h1>Bienvenue, <span id="user"></span> !</h1>
-  <p>Ceci est votre tableau de bord.</p>
-  <button id="logout">Déconnexion</button>
-  <script src="consolee.js"></script>
+    <!-- En-tête -->
+    <header>
+        <h1>Mon Compte</h1>
+    </header>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <h2>Bienvenue, <span id="user-name">Utilisateur</span></h2>
+        <p>Ceci est votre espace personnel.</p>
+
+        <!-- Tableau de bord -->
+        <div class="dashboard">
+            <h3>Tableau de Bord</h3>
+            <p>Votre sport favori : <span class="favorite" id="favorite-sport">Non défini</span></p>
+        </div>
+
+        <!-- Boutons -->
+        <div class="buttons">
+            <button class="edit" onclick="editProfile()">Modifier le profil</button>
+            <button class="logout" id="logout">Déconnexion</button>
+        </div>
+
+        <!-- Liens -->
+        <div class="links">
+            <a href="index.html">Retour à la page d'accueil</a>
+        </div>
+    </div>
+
+    <script>
+        // Charger les données utilisateur
+        function loadUserData() {
+            const userName = localStorage.getItem('userName') || 'Utilisateur';
+            const favoriteSport = localStorage.getItem('favoriteSport') || 'Non défini';
+
+            document.getElementById('user-name').textContent = userName;
+            document.getElementById('favorite-sport').textContent = favoriteSport;
+        }
+
+        // Modifier le profil
+        function editProfile() {
+            const newUserName = prompt('Entrez votre nouveau nom :', localStorage.getItem('userName') || 'Utilisateur');
+            if (newUserName) {
+                localStorage.setItem('userName', newUserName);
+                loadUserData();
+                alert('Votre nom a été mis à jour avec succès !');
+            }
+        }
+
+        // Simuler la déconnexion
+        document.getElementById('logout').addEventListener('click', () => {
+            alert('Vous êtes déconnecté.');
+            window.location.href = 'login.html';
+        });
+
+        // Charger les données au démarrage
+        loadUserData();
+    </script>
 </body>
 </html>
-</head>
-<section id="">
-  <a href="index.html">Voir toutes les actualités Football</a>
-</section>
-<body>
